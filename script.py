@@ -52,7 +52,7 @@ def checkbattery():
         winsound.Beep(10000,200)
         balloon_tip('Low Battery Level', str(battery.EstimatedChargeRemaining)+'% remaining! Connect charger')
         #print thisbattery
-        #time.sleep(180)
+        time.sleep(180)
         battery1=wmi.WMI().Win32_Battery()[0]
         if battery1.EstimatedChargeRemaining<thisbattery:
             for i in range(1, 5):
